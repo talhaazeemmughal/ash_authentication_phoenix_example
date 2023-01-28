@@ -34,6 +34,8 @@ config :ash, :use_all_identities_in_manage_relationship?, false
 # at the `config/runtime.exs`.
 config :ash_auth_phoenix_example, AshAuthPhoenixExample.Mailer, adapter: Swoosh.Adapters.Local
 
+config :ash_auth_phoenix_example, :token_signing_secret, signing_secret: "dummy salt"
+
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.14.41",
